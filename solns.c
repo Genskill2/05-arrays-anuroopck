@@ -32,7 +32,7 @@ float average (int ar[], int numbr)
     return (average/numbr);
 }
 int mode (int ar[], int numbr)
-{   int count, highest = 0;
+{   int count,record, highest = 0;
     for (int i=0; i<numbr; i++ )
     {   count = 1;
         for (int j = 0; j < i; j++)
@@ -43,8 +43,25 @@ int mode (int ar[], int numbr)
           }
           if (count > highest) {
             highest = count;
+            record = a[i];
           }
         }
     }
     return highest;
+}
+int factors (int ar[], int numbr)
+{ int flag = 0, count = 0, k= numbr;
+  for (int i=2; i<(k/2); i++)
+  {
+    while ( numbr%i==0 ) {
+      numbr = numbr/i;
+      ar[i-2]=i;
+      if(flag != i)
+      {
+        flag = i;
+        count = count +1;
+      }
+    }
+  }
+  return count;
 }
