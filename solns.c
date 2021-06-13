@@ -23,3 +23,11 @@ int min (int ar[], int numbr)
     }
     return lowest;
 }
+float average (int ar[], int numbr)
+{   float average = 0;
+    for (int i=1; i<numbr; i++ )
+    {
+        average = average + ar[i];
+    }
+    return (average/numbr);
+}
