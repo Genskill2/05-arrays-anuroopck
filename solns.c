@@ -33,6 +33,9 @@ float average (int ar[], int numbr)
 }
 int mode (int ar[], int numbr)
 {   int count,record, highest = 0;
+    if (numbr==1) {
+      return ar[0];
+    }
     for (int i=0; i<numbr; i++ )
     {   count = 1;
         for (int j = 0; j < i; j++)
