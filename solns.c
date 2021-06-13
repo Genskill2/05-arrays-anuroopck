@@ -53,14 +53,15 @@ int mode (int ar[], int numbr)
     return record;
 }
 int factors (int ar[], int numbr)
-{ int g = 0, count = 0, k= numbr;
-  for (int i=2; i<=k; i++)
+{ int flag = 0, count = 0, k= numbr;
+  for (int i=2; i<(k/2); i++)
   {
     while ( numbr%i==0 ) {
       numbr = numbr/i;
-      ar[g] = i;
-      g++;
+      ar[flag]=i;
+      flag++;
       count = count +1;
+
     }
   }
   return count;
