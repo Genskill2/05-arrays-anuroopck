@@ -12,3 +12,14 @@ int max (int ar[], int numbr)
     }
     return highest;
 }
+int min (int ar[], int numbr)
+{   int lowest=ar[0];
+    for (int i=1; i<numbr; i++ )
+    {
+        if (lowest > ar[i])
+        {
+          lowest = ar[i];
+        }
+    }
+    return lowest;
+}
