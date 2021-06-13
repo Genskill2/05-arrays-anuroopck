@@ -52,7 +52,7 @@ int mode (int ar[], int numbr)
     }
     return record;
 }
-int factors (int ar[], int numbr)
+int factors (int numbr, int ar[])
 { int flag = 0, count = 0, k= numbr;
   for (int i=2; i<(k/2); i++)
   {
