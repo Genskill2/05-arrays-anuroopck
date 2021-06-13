@@ -47,20 +47,17 @@ int mode (int ar[], int numbr)
           }
         }
     }
-    return highest;
+    return record;
 }
 int factors (int ar[], int numbr)
-{ int flag = 0, count = 0, k= numbr;
-  for (int i=2; i<=(k/2); i++)
+{ int g = 0, count = 0, k= numbr;
+  for (int i=2; i<=k; i++)
   {
     while ( numbr%i==0 ) {
       numbr = numbr/i;
-      ar[i-2]=i;
-      if(flag != i)
-      {
-        flag = i;
-        count = count +1;
-      }
+      ar[g] = i;
+      g++;
+      count = count +1;
     }
   }
   return count;
