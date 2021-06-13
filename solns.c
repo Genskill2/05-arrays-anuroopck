@@ -43,7 +43,7 @@ int mode (int ar[], int numbr)
           }
           if (count > highest) {
             highest = count;
-            record = a[i];
+            record = ar[i];
           }
         }
     }
